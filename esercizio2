@@ -1,0 +1,57 @@
+//ESERCIZIO 2 SINGH RAVLEEN
+internal class Program
+{
+    private static void Main(string[] args)
+    {
+        Program p=new Program();
+        string n=p.Nome();
+        string c=p.Cognome();
+        
+        p.Dati(n, c);
+
+    }
+
+    string Nome()
+    {
+        Console.WriteLine("Inserisci il tuo nome: ");
+        string nome=Console.ReadLine();
+        return nome;
+    }
+
+    string Cognome()
+    {
+        Console.WriteLine("Inserisci il tuo cognome: ");
+        string cognome=Console.ReadLine();
+        return cognome;
+    }
+
+    int Id()
+    {
+        Console.WriteLine("Inserisci id: ");
+        int id=Convert.ToInt32(Console.ReadLine());
+        return id;
+    }
+
+    void Dati(string nome, string cognome)
+    {
+       
+        do{
+            if(nome=="ravleen" & cognome=="singh")
+            {
+                Console.WriteLine("nome e cognome inseriti correttamente");
+                Program p=new Program();
+                id=p.Id();
+                if(id==134567)
+                {
+                    Console.WriteLine("Id inserito correttamente.\n");
+                    Console.WriteLine("Login effettuato!");
+                }
+                else
+                {
+                    Console.WriteLine("Id non corretto. Non è possibile accedere!");
+                }
+            }
+        }while(nome!="ravleen" & cognome!="singh");
+    }
+
+}
